@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=0.8,user-scalable=0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>O！My God超級商城</title>
+<meta property="og:title" lang="zh-Hant-TW"  content="O！My God超級商城">
+<!-- <meta property="og:image" content="img/logoicon.jpg" /> -->
+<link href="css/page2.css" rel="stylesheet" type="text/css" />
+<link href="css/allen_css.css" rel="stylesheet" type="text/css" />
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<!-- <img class="displaynone" src="img/logoicon.jpg"> -->
+<div class="mainHW"> 
+  <!--置頂按鈕-->
+  <div id="gototop"><span>❯</span>
+    <p></p>
+    <h1>TOP</h1>
+    <p></p>
+  </div>
+  <!--上選單-->
+  <header>
+    <div id="onback" onclick="parent.location='login.html'"></div>
+    <div class="Ltitle" onclick="javascript:history.back()">輸入手機驗證碼</div>
+    <div id="onOK"  onclick="parent.location='javascript:history.back()'"></div>
+  </header>
+  <!--搜尋-->
+  
+  <div class="main">
+    <div class="h20"></div>
+    <div class="Fsize7 fcenter"><b>已發送驗證碼至+886 095****551</b></div>
+    <div class="container">
+      <div class="col col2">
+        <div class="fcenter">
+          <div data-pin></div>
+          <p class="message"></p>
+        </div>
+      </div>
+    </div>
+	   <div class="h20"></div>
+    <div id="sec01" class="secf Fsize6">填入驗證碼還有<span id="form1" runat="server"><span id='div1'></span></span>秒</div>
+    <div id="sec02" class="secf Fsize6"><a href="" class="rpocolor">重新發送驗證碼</a></div>
+	  <div class="h40"></div>
+	 <div class="secf Fsize6"><a href="" class="helpbtn2">需要幫助 <img src="svg/ico_question_bk.svg" width="20"></a></div>
+	  <div class="h20"></div>
+	 <img src="svg/img_verification_mobile.svg" width="80%" style="margin: 10px 10%">
+	   
+    <div class="h100"></div>
+    <div class="h100"></div>
+  </div>
+
+  
+  <!--購物車--直接購買-->
+  <div class="shopbg">
+    <div class="snin">
+      <ul class="Fsize6 sn">
+        <li><a href="Member_VerificationCode02.html">收不到手機驗證碼</a></li>
+        <li><a>更多問題</a></li>
+        <li><a href="javascript:shopoff();">取消</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer> 
+    <!--五大主選單-->
+    <ul class="f4menu">
+      <li class="f4btn01" onclick="window.open('http://omygod.com.tw/house');return false;"><span>1</span>房屋交易</li>
+      <li class="f4btn02" onclick="parent.location='http://omygod.com.tw'"><span>1</span>商店大街</li>
+      <li class="f4btn03" onclick="parent.location='Mystore.html'"><span>1</span>我的賣場</li>
+      <li class="f4btn04o" onclick="parent.location='Store.html'"><span>1</span>超級商城</li>
+      <li class="f4btn05" onclick="parent.location='login_my.html'"><span>1</span>會員專區</li>
+    </ul>
+  </footer>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
+  <!-- 下方還有加西個格子套件LIB=>11111 </script>  -->
+  <script>
+  //驗證碼pin格子套件============================== 
+  /*
+  * Project: Pin
+  * Description: Plugin for pin input, each digit is entered into individual input boxes
+  * Author: https://github.com/sandy0201
+  * License: MIT
+  * Version: 0.0.1
+  * Dependancies: jquery-1.*
+  * Date: 15/06/2017
+  */
+  // 111111
+ !function(e,t,s,i){"use strict";
+ function n(e,t){
+   if(this.element=e,this.settings=r,this._defaults=r,this._name=a,t!==i&&null!==t){
+     for(var s in r)
+     if("object"!=typeof r[s])
+     t[s]!==i&&(this.settings[s]=t[s]);
+     else if(r[s]!==i)
+     for(var n in r[s])
+     t[s]!==i&&t[s][n]!==i&&(this.settings[s][n]=t[s][n]);
+     for(var s in t)
+     if("object"==typeof t[s])
+     for(var n in t[s])
+     this.settings[s][n]===i&&(this.settings[s][n]=t[s][n])
+   }
+ this.init()}
+     var a="pin",
+     r={
+         messages:
+         {
+           valid:"Valid!",required:"This field cannot be empty",
+           numeric:"This field requires a numeric value, no letters or special characters",
+           sequential:"This field cannot be sequential, e.g. 1234",
+           repeat:"This field cannot contain the same values only, e.g. 1111"
+         }
+         ,count:4,
+         displayMessage:{},
+         isPassword:!1,
+         showvValidErrorMessage:!0,
+         allowSequential:!0,
+         allowRepeat:!0
+       };
+       e.extend(n.prototype,{
+         init:function(t){
+           t=t||!1;
+           var s=this;
+           if(0===e(s.element).children().length&&s.settings!==i&&null!==s.settings)
+           for(var n=0;n<s.settings.count;n++)
+           s.settings.isPassword&&s.settings.showvValidErrorMessage?e(s.element).append(
+             '<input type="password" class="input_01" name="pin_'+n+'" data-vvalid="numeric|min:1|max:1" maxlength="1" />')
+             :s.settings.isPassword?e(s.element).
+             append('<input type="password" class="input_01" name="pin_'+n+'" data-vvalid="numeric|min:1|max:1" data-vvalid-error-text="false" maxlength="1" />')
+             :s.settings.showvValidErrorMessage?e(s.element).
+             append('<input type="text" class="input_01" name="pin_'+n+'" data-vvalid="numeric|min:1|max:1" maxlength="1" />')
+             :e(s.element).
+             append('<input type="text" class="input_01" name="pin_'+n+'" data-vvalid="numeric|min:1|max:1" data-vvalid-error-text="false" maxlength="1" />');
+             return s.isNotAForm(s.element,t)
+           },
+           isNotAForm:function(t,s){
+             var i=this,n=[];
+             if(e.each(e(t).children(),function(){
+               n.push(this),
+               i.focus(this)
+             }),s){
+               var a=i.validate(n);
+               return e.each(n,function(){
+                 a.valid?e(this).removeClass("error")
+                 :e(this).addClass("error")}),
+                 e(i.settings.displayMessage).html(a.message),
+                 a.valid
+               }
+             },
+             focus:function(t){
+               e(t).on("click",function(){
+                 e(t).val("")
+               }),
+               e(t).on("keypress",function(){
+                 setTimeout(function(){
+                   e(t).next().focus().val("")
+                 },
+                 10
+                 )
+               })
+             },
+             validate:function(t){
+               var s=this,i=0,n=[];
+               if(e.each(t,function(){
+                 n.push(parseInt(e(this).val())),
+                 ""===e(this).val()&&i++}),
+                 i===n.length)
+                 return{
+                   valid:!1,message:s.settings.messages.required
+                 };
+                 for(var a=0;a<n.length;a++)
+                 if(isNaN(parseInt(n[a])))
+                 return{
+                   valid:!1,message:s.settings.messages.numeric
+                 };
+                 return s.settings.allowSequential||s.sequential(n)?s.settings.allowRepeat||s.repeat(n)?{
+                   valid:!0,message:s.settings.messages.valid
+                 }:{
+                   valid:!1,message:s.settings.messages.repeat}:{
+                     valid:!1,message:s.settings.messages.sequential
+                   }
+                 },
+                 sequential:function(e){
+                   for(var t=[],s=0;s<e.length;s++)t.push(e[0]+s);
+                   return JSON.stringify(e)!==JSON.stringify(t)
+                 },
+                 repeat:function(t){
+                   for(var s=[],i=0;i<t.length;i++)i>0&&(t[0]===t[i]?s.push(!0):s.push(!1));
+                     return e.inArray(!1,s)!==-1
+                   }
+                 }),
+                 e.fn[a]=function(t){
+                   return this.each(function(){
+                     e.data(this,"plugin_"+a)||e.data(this,"plugin_"+a,new n(this,t))
+                   })
+                 },
+                 e.extend(e.pin,{
+                   destroy:function(){
+                     delete this.validate
+                   }
+                 })
+               }
+               (jQuery,window,document);
+  //驗證碼pin格子套件====END========================== 
+  </script>
+
+  <script type="text/javascript">
+			(function ($, document) {
+				$(document).ready(function () {
+					$('[data-pin]').pin({
+						displayMessage: $('.col2 .message'),
+						allowSequential: false,
+						allowRepeat: false,
+						count: 6
+					});
+
+					$('[name="next"]').on('click', function (e) {
+						e.preventDefault();
+						$('[data-pin').data('plugin_pin').init(true);
+					});
+				});
+			})(jQuery, document);
+        </script> 
+  
+  <!-- Swiper JS --> 
+  <script src="js/swiper.min.js"></script> 
+  <script src="js/jquery.js"></script> 
+  <script>
+
+
+            $('h4 b').on('click', function() {
+                $(this)
+                    .addClass('hover')
+                    .siblings('.hover')
+                    .removeClass('hover')
+            })
+        </script> 
+  <script src="js/product.js"></script> 
+</div>
+<script type="text/javascript">
+
+//設定倒數秒數
+var t = 15;
+
+//顯示倒數秒收
+function showTime()
+{
+    t -= 1;
+    document.getElementById('div1').innerHTML= t;
+	$('#sec01').show();
+	$('#sec02').hide();
+    
+    if(t==0)
+    {
+        
+		$('#sec01').hide();
+		$('#sec02').show();
+      event.stopPropagation()
+
+    }
+
+    
+    //每秒執行一次,showTime()
+	timer=setTimeout(function(){
+			showTime()
+		}, 1000);
+}
+	
+	showTime();
+
+</script>
+</body>
+</html>
+
+
+

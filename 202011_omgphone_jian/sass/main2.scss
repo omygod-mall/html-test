@@ -1,0 +1,130 @@
+// Scss Document
+//顏色區分
+$color01: #FFFF00;
+$color02: #FFFF00;
+$color03: #FFFF00;
+$color04: #FFFF00;
+$color05: #FFFF00;
+
+//字級大小
+$font01: 1.8rem;
+$font02: 1.6rem;
+$font03: 1.4rem;
+$font04: 1rem;
+$font05: 0.75rem;
+
+.checkb{font-size: $font04}
+
+:root{
+    --bg: #f5f5f5;
+    --height: 50px;
+    --bg-hover1: rgba(0,0,0,0.08);
+    --bbc: #cd0067;
+    --opaq1: .08;
+    --padding: 0px 0px 0px 40px;
+    --fz: 1.6rem;
+}
+
+label{
+    position: relative;
+	
+    > span{
+        &::after,
+        &::before{
+            position: absolute;
+            transition: 200ms ease-in-out;
+        }
+        &::before{
+            content: attr(data-label);
+            left: 40px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+		
+            pointer-events: none;
+            height: $font04;
+            font-size: $font04;
+            color: gray;
+            line-height: 1;
+        }
+    }
+    > input{
+		border: 0px;
+		margin: 10px auto 10px auto;
+        &:focus,
+        &:valid{
+            ~ span{
+                &::before{
+                    font-size: $font05;
+                    color: gray;
+                }
+            }
+        }
+    }
+}
+
+input{
+    width: 86%;
+    height: var(--height);
+    padding: var(--padding);
+    font-size: $font04;
+	background-repeat: no-repeat;
+    &:focus,
+    &:active{
+        outline: 0;
+        border: 0;
+    }
+}
+.icon01{
+	background-position: 0px 5px;
+	background-image: url("../svg/ico_man_gray_deep.svg");
+}
+.icon02{
+	background-position: 0px 5px;
+	background-image: url("../svg/ico_idcard_deep.svg");
+}
+.icon03{
+	background-position: 0px 5px;
+	background-image: url("../svg/ico_mail_registered_deep.svg");
+}
+.icon04{
+	background-position: 0px 5px;
+	background-image: url("../svg/ico_password_setting_deep.svg");
+}
+.icon05{
+	background-position: 0px 5px;
+	background-image: url("../svg/ico_mobile_sms_deep.svg");
+	width: 55%;float: left;border-radius: 5px 0px 0px 5px;height: 50px;
+	border: 1px solid #cd0067;
+}
+.icon04btn{width: 30%;float: left;  text-align: center;padding-left: 0px;border-radius: 0px 5px 5px 0px;border: 1px solid #cd0067;height: 52px;margin-left: -1px;color: #FFFFFF;background-color: #cd0067 }
+
+.outlined{
+    > input{
+        border: 1px solid var(--bbc);
+        border-radius: 4px;
+        &:focus{
+            box-shadow: 0 0 0 2px gray;
+            border-color: transparent;
+        }
+        &:focus,
+        &:valid{
+            ~ span{
+                &::before{
+                    transform: translateY(-28px);
+                    background-color: white;
+                    padding: 2px 4px;
+                }
+            }
+        }
+    }
+}
+.container a{color: #cd0067}
+.labeltxt{color: #cd0067;font-size: $font05;width: 96%;display: none1}
+
+
+
+
+
+
+

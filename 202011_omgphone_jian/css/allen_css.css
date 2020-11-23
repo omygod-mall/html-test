@@ -1,0 +1,349 @@
+@media screen and (min-width: 480px) {
+  .snin {
+    background-color: rgba(255,255,255,1);
+    position: fixed;
+    width: 480px!important;
+    bottom: 0px;
+    z-index: 13;
+    left: 50%;
+    margin-left: -240px!important
+        }
+  }
+    
+@media screen and (max-width: 479px) {
+  .snin {
+    background-color: rgba(255,255,255,1);
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    z-index: 13;
+        }
+  }
+
+.checkb {
+    font-size: 1rem; }
+  
+  :root {
+    --bg: #f5f5f5;
+    --height: 50px;
+    --bg-hover1: rgba(0,0,0,0.08);
+    --bbc_translucent-black: rgba(0,0,0,.42);
+    --bbc-pink: #cd0067;
+    --opaq1: .08;
+    --padding: 0px 0px 0px 40px;
+    --fz: 1.6rem; }
+
+  form {
+    margin: 0; }
+  
+  label {
+    position: relative;
+    top: 10px; }
+    label > span::after, label > span::before {
+      position: absolute;
+      transition: 200ms ease-in-out; }
+    label > span::before {
+      content: attr(data-label);
+      left: 40px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      pointer-events: none;
+      height: 1rem;
+      font-size: 1rem;
+      color: gray;
+      line-height: 1; }
+    label > input {
+      border: 0px;
+      margin: 10px auto 10px auto; }
+      label > input:focus ~ span::before, label > input:valid ~ span::before {
+        font-size: 0.75rem;
+        color: gray; }
+
+  .label_01 {
+    display: block;
+    font-size: 11px;
+    line-height: normal;
+    font-weight: bold; }
+
+  ul.sn {
+    list-style: none;
+    margin: 0px;
+    padding: 0px; }
+  ul.sn li a {
+    display: block;
+    margin: 0px;
+    border-top: 1px solid #CCCCCC;
+    padding: 10px;
+    text-align: center;
+    color: #009ba7;
+    text-decoration: none;
+    cursor: pointer; }
+  ul.sn li a:hover {
+    color: #000000; }
+
+  input {
+    width: 86%;
+    height: var(--height);
+    padding: var(--padding);
+    font-size: 1rem;
+    background-repeat: no-repeat; }
+    input:focus, input:active {
+      outline: 0;
+      border: 0; }
+
+        .input_01[type="text"].error {
+        border: 1px solid red;
+        border-radius: 5px; }
+
+        .input_01[type="text"], 
+        .input_01[type="password"] {
+        width: 50px;
+        height: 70px;
+        padding: 1px 2px;
+        margin-left: 5px;
+        margin-bottom: 0;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 20px;
+        font-family: 'Work Sans', 'Noto Sans TC', '微軟正黑體', 'LiHei Pro', 'eiti TC', STHeiti, sans-serif;
+        border: 1px solid #CCCCCC; }
+        .input_01:focus, .input_01:active {
+            border: 2px solid #000000; }
+
+        .input_01[type="text"]:not(:last-of-type), 
+        .input_01[type="password"]:not(:last-of-type) {
+        margin-right: 5px; }
+
+        .input_01[type="text"].error, 
+        .input_01[type="password"].error {
+        border-color: #ff0000; }
+
+  .icon01 {
+    background-position: 0px 5px;
+    background-image: url("../svg/ico_man_gray_deep.svg"); }
+  
+  .icon02 {
+    background-position: 0px 5px;
+    background-image: url("../svg/ico_idcard_deep.svg"); }
+  
+  .icon03 {
+    background-position: 0px 5px;
+    background-image: url("../svg/ico_mail_registered_deep.svg"); }
+  
+  .icon04 {
+    background-position: 0px 5px;
+    background-image: url("../svg/ico_password_setting_deep.svg"); }
+  
+  .icon05 {
+    background-position: 0px 5px;
+    background-image: url("../svg/ico_mobile_sms_deep.svg");
+    width: 55%;
+    float: left;
+    border-radius: 5px 0px 0px 5px;
+    height: 50px;
+    border: 1px solid #999999; }
+      
+  .icon05_1 {
+    background-position: 0px 5px;
+    background-image: url("../svg/ico_mobile_sms_deep.svg");
+    width: 55%;
+    float: left;
+    border-radius: 5px 0px 0px 5px;
+    height: 50px;
+    border: 1px solid #cd0067; }
+
+  .icon04btn {
+    width: 30%;
+    float: left;
+    text-align: center;
+    padding-left: 0px;
+    border-radius: 0px 5px 5px 0px;
+    border: 1px solid #999999;
+    height: 52px;
+    margin-left: -1px; }
+
+  .icon04btn_1 {
+    width: 30%;
+    float: left;
+    text-align: center;
+    padding-left: 0px;
+    border-radius: 0px 5px 5px 0px;
+    border: 1px solid #cd0067;
+    height: 52px;
+    margin-left: -1px;
+    color: #FFFFFF;
+    background-color: #cd0067; }
+
+  .helpbtn {
+    text-align: center;
+    bottom: 120px;
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    color: #000000; }
+  .helpbtn2 {
+    text-align: center;
+    color: #000000;
+    text-decoration: none; }
+
+  #gototop {
+    bottom: 150px; }
+  
+  .outlined-black > input {
+    border: 1px solid var(--bbc_translucent-black);
+    border-radius: 4px; }
+  .outlined-black > input:focus {
+      box-shadow: 0 0 0 2px gray;
+      border-color: transparent; }
+  .outlined-black > input:focus ~ span::before, .outlined-black > input:valid ~ span::before {
+      transform: translateY(-28px);
+      background-color: white;
+      padding: 2px 4px; }
+
+  .outlined-pink > input {
+    border: 1px solid var(--bbc-pink);
+    border-radius: 4px; }
+  .outlined-pink > input:focus {
+      box-shadow: 0 0 0 2px gray;
+      border-color: transparent; }
+  .outlined-pink > input:focus ~ span::before, .outlined-pink > input:valid ~ span::before {
+      transform: translateY(-28px);
+      background-color: white;
+      padding: 2px 4px; }
+
+  .container_a {
+    padding-left:5%;
+    color: #cd0067; }
+    
+  .container_b {
+    width: 100% }
+
+  .text-error {
+    color: red;
+    font-size: 10px;
+    line-height: normal; }
+
+  .col {
+    padding: 1% 2% 2% 2%;
+    width: 96%; }
+
+  .secf {
+    text-align:center; }
+  
+  .labeltxt {
+    color: #cd0067;
+    font-size: 0.75rem;
+    width: 96%;
+    display: none1; }
+
+  .rpocolor {
+    background-color: #cd0067;
+    padding: 10px 40px;
+    border-radius: 100px;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 10px auto;
+    clear: both; }
+
+  .img_hidden{
+    display: none; }
+
+  .header_position-fixed{
+    position: fixed; 
+    z-index: 10; }
+
+/* 勾選框================ */
+.checcont,
+.checcont2 {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1.1em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: 400;
+}
+
+.leftb {
+    float: left;
+    margin: 30px 10px auto 10px;
+}
+
+/* 隱藏瀏覽器的默認複選框 */
+.checcont input,
+.checcont2 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    font-weight: 400;
+}
+
+/* 創建一個自定義復選框 */
+.checcont .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 5px;
+    border: 1px solid #cd0067;
+}
+
+/* 鼠標懸停時，添加灰色背景色 */
+.checcont:hover input ~ .checkmark,
+.checcont2:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* 選中復選框後，添加藍色背景 */
+.checcont input:checked ~ .checkmark,
+.checcont2 input:checked ~ .checkmark {
+    background-color: #ff6699;
+    margin-top: 0px;
+}
+
+/* 創建選中標記/指示符（未選中時隱藏） */
+.checcont .checkmark:after,
+.checcont2 .checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+/* 選中時顯示對勾 */
+.checcont input:checked ~ .checkmark:after,
+.checcont2 input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* 選中標記/指示符的樣式 */
+.checcont .checkmark:after,
+.checcont2 .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.checcont span,
+.checcont2 span {
+    margin: 0px auto auto 0px;
+    position: absolute;
+    left: 35px;
+    top: 0px;
+    font-weight: 400;
+}
+  
